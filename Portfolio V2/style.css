@@ -1,0 +1,224 @@
+:root {
+    font-size: 16px; /*sets rem size*/
+    --myLighterGrey: #cbcbcb;
+    --myLightGrey: #969696;
+    --myDarkGrey: #80808050;
+    --myBlue: #135c91;
+}
+
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior:smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    background-color: black;
+}
+
+#header {
+    position: relative;
+    background-color: var(--myDarkGrey);
+    cursor: default;
+}
+#header img {
+    height: 20rem;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+}
+#header h1 {
+    position: absolute;
+    inset: 40%;
+    color: white;
+    font-size: 500%;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    width: 100%;
+    top: 0;
+    position: sticky;
+    background-color: var(--myBlue);
+    transition: 0.3s ease all;
+}
+.navbarItem {
+    position: relative;
+    padding: 1.4rem;
+    padding-left: 1.5rem;
+    padding-right: 2rem;
+    border-right: solid 1px var(--myLightGrey);
+    margin-top: 0.3rem;
+    margin-bottom: 0.6rem;
+    color: white;
+    font-family: Roboto;
+    transition: 0.25s;
+}
+.navbarItem:last-child {
+    border: none;
+}
+.navbarItem:hover {
+    background-color: var(--myLightGrey);
+    box-shadow: 8px 8px 100px black;
+    scale: 1.1;
+    transition: 0.25s;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    height: fit-content;
+    padding: 1rem;
+    border: 1px var(--myDarkGrey);
+    border-radius: 10px;
+    margin: 1rem;
+    background-color: var(--myDarkGrey);
+    color: white;
+}
+.left {
+    max-width: 50%;;
+    padding: 1rem;
+    padding-right: 3rem;
+    border-right: solid 1px var(--myLighterGrey);
+    margin-right: 3rem;
+    color: var(--myLighterGrey);
+    font-family: Roboto;
+}
+.right {
+    max-width: 50%;;
+    padding: 1rem;
+    margin-left: 3rem;
+    color: var(--myLighterGrey);
+    font-family: Roboto;
+}
+.right h2 {
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 200%;
+}
+.right a {
+    color: var(--myBlue);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    transition: 0.1s;
+}
+.right a:hover {
+  color: #156aa6;
+  transition: 0.1s;
+}
+
+#introLeft {
+    padding: 1rem;
+    padding-right: 5rem;
+    border-right: solid 2px var(--myLighterGrey);
+    font-size: 200%;
+}
+#introRight {
+    padding: 1rem;
+    padding-left: 5rem;
+}
+
+#footer {
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    width: 100%;
+    position:static;
+    bottom: 0;
+    padding: 0;
+    margin: 0;
+    background-color: #1c1c1c;
+}
+.footerItem {
+    padding: 1rem;
+    color: grey;
+}
+.footerItem:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  
+  /* CSS */
+  
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  
+  /* CSS */
+  
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+  /* CSS */
+  
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  
+  /* CSS */
+  
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  
+  /* CSS */
+  
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  /* CSS */
+  
+}
