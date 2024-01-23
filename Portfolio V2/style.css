@@ -1,0 +1,758 @@
+:root {
+  font-size: 16px; /*sets rem size*/
+  --myLighterGrey: #cbcbcb;
+  --myLightGrey: #969696;
+  --myDarkGrey: #80808050;
+  --myBlue: #135c91;
+  --myLightBlue: #156aa6;
+}
+
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior:smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+#notice {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  border: solid 2px #FF0000;
+  margin-top: 0.3rem;
+  margin-right: 1rem;
+  margin-bottom: 0.6rem;
+  margin-left: 1rem;
+  color: white;
+  font-family: Roboto;
+  box-shadow: inset 1px 1px 25px red ;
+}
+
+#notice img {
+  height: 30px;
+  padding-right: 1rem;
+}
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+ @media (min-width: 1281px) { /*change some elements to fit bigger screens */
+  
+  #header {
+    position: relative;
+    background-color: var(--myDarkGrey);
+    cursor: default;
+  }
+  #header img {
+    height: 20rem;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+  }
+  #header h1 {
+    position: absolute;
+    inset: 40%;
+    color: white;
+    font-size: 500%;
+  }
+
+  #navbar {
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    width: 100%;
+    top: 0;
+    position: sticky;
+    background-color: var(--myBlue);
+    transition: 0.3s ease all;
+  }
+  .navbarItem {
+    position: relative;
+    padding: 1.4rem;
+    padding-left: 1.5rem;
+    padding-right: 2rem;
+    border-right: solid 1px var(--myLightGrey);
+    margin-top: 0.3rem;
+    margin-bottom: 0.6rem;
+    color: white;
+    font-family: Roboto;
+    transition: 0.25s;
+  }
+  .navbarItem:last-child {
+    border: none;
+  }
+  .navbarItem:hover {
+    background-color: var(--myLightGrey);
+    box-shadow: 8px 8px 100px black;
+    scale: 1.1;
+    transition: 0.25s;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    height: fit-content;
+    padding: 1rem;
+    border: 1px var(--myDarkGrey);
+    border-radius: 10px;
+    margin: 1rem;
+    background-color: var(--myDarkGrey);
+    color: white;
+  }
+  .left {
+    max-width: 50%;
+    padding: 1rem;
+    padding-right: 3rem;
+    border-right: solid 1px var(--myLighterGrey);
+    margin-right: 3rem;
+    color: var(--myLighterGrey);
+    font-family: Roboto;
+  }
+  .right {
+    max-width: 50%;
+    padding: 1rem;
+    margin-left: 3rem;
+    color: var(--myLighterGrey);
+    font-family: Roboto;
+  }
+  .right h2 {
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 200%;
+  }
+  .right a {
+    color: var(--myBlue);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: 0.1s;
+  }
+  .right a:hover {
+  color: var(--myLightBlue);
+  transition: 0.1s;
+  }
+
+  #introLeft {
+    padding: 1rem;
+    padding-right: 5rem;
+    border-right: solid 2px var(--myLighterGrey);
+    font-size: 200%;
+  }
+  #introRight {
+    padding: 1rem;
+    padding-left: 5rem;
+  }
+
+  #contactElements {
+    display: flex;
+    align-items: center;
+  }
+  .contactElement {
+    padding: 1rem;
+    border: solid 1px white;
+    border-radius: 3px;
+    margin: 1rem;
+  }
+  .contactElement:hover {
+    box-shadow: 8px 8px 100px;
+    scale: 1.1;
+  }
+  .contactElement img {
+    height: 50px;
+  }
+
+  #footer {
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    width: 100%;
+    position:static;
+    bottom: 0;
+    padding: 0;
+    margin: 0;
+    background-color: #1c1c1c;
+  }
+  .footerItem {
+    padding: 1rem;
+    color: grey;
+  }
+  .footerItem:hover {
+    color: white;
+    text-decoration: underline;
+  }
+
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  
+  #header {
+    position: relative;
+    background-color: var(--myDarkGrey);
+    cursor: default;
+  }
+  #header img {
+    height: 20rem;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+  }
+  #header h1 {
+    position: absolute;
+    inset: 40%;
+    color: white;
+    font-size: 500%;
+  }
+
+  #navbar {
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    width: 100%;
+    top: 0;
+    position: sticky;
+    background-color: var(--myBlue);
+    transition: 0.3s ease all;
+  }
+  .navbarItem {
+    position: relative;
+    padding: 1.4rem;
+    padding-left: 1.5rem;
+    padding-right: 2rem;
+    border-right: solid 1px var(--myLightGrey);
+    margin-top: 0.3rem;
+    margin-bottom: 0.6rem;
+    color: white;
+    font-family: Roboto;
+    transition: 0.25s;
+  }
+  .navbarItem:last-child {
+    border: none;
+  }
+  .navbarItem:hover {
+    background-color: var(--myLightGrey);
+    box-shadow: 8px 8px 100px black;
+    scale: 1.1;
+    transition: 0.25s;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    height: fit-content;
+    padding: 1rem;
+    border: 1px var(--myDarkGrey);
+    border-radius: 10px;
+    margin: 1rem;
+    background-color: var(--myDarkGrey);
+    color: white;
+  }
+  .left {
+    max-width: 50%;
+    padding: 1rem;
+    padding-right: 3rem;
+    border-right: solid 1px var(--myLighterGrey);
+    margin-right: 3rem;
+    color: var(--myLighterGrey);
+    font-family: Roboto;
+  }
+  .right {
+    max-width: 50%;
+    padding: 1rem;
+    margin-left: 3rem;
+    color: var(--myLighterGrey);
+    font-family: Roboto;
+  }
+  .right h2 {
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 200%;
+  }
+  .right a {
+    color: var(--myBlue);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: 0.1s;
+  }
+  .right a:hover {
+  color: var(--myLightBlue);
+  transition: 0.1s;
+  }
+  .right iframe {
+    height: 350px;
+    width: 350px;
+  }
+
+  #introLeft {
+    padding: 1rem;
+    padding-right: 5rem;
+    border-right: solid 2px var(--myLighterGrey);
+    font-size: 200%;
+  }
+  #introRight {
+    padding: 1rem;
+    padding-left: 5rem;
+  }
+
+  #contactElements {
+    display: flex;
+    align-items: center;
+  }
+  .contactElement {
+    padding: 1rem;
+    border: solid 1px white;
+    border-radius: 3px;
+    margin: 1rem;
+  }
+  .contactElement:hover {
+    box-shadow: 8px 8px 100px;
+    scale: 1.1;
+  }
+  .contactElement img {
+    height: 50px;
+  }
+
+  #footer {
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    width: 100%;
+    position:static;
+    bottom: 0;
+    padding: 0;
+    margin: 0;
+    background-color: #1c1c1c;
+  }
+  .footerItem {
+    padding: 1rem;
+    color: grey;
+  }
+  .footerItem:hover {
+    color: white;
+    text-decoration: underline;
+  }
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #header {
+    position: relative;
+    background-color: var(--myDarkGrey);
+    cursor: default;
+  }
+  #header img {
+    height: 15rem;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+  }
+  #header h1 {
+    position: absolute;
+    top: 10rem;
+    left: 30%;
+    color: white;
+    font-size: 500%;
+  }
+
+  #navbar {
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    width: 100%;
+    top: 0;
+    position: sticky;
+    background-color: var(--myBlue);
+    transition: 0.3s ease all;
+  }
+  .navbarItem {
+    position: relative;
+    padding: 1.4rem;
+    padding-left: 1.5rem;
+    padding-right: 2rem;
+    border-right: solid 1px var(--myLightGrey);
+    margin-top: 0.3rem;
+    margin-bottom: 0.6rem;
+    color: white;
+    font-family: Roboto;
+    transition: 0.25s;
+  }
+  .navbarItem:last-child {
+    border: none;
+  }
+  .navbarItem:hover {
+    background-color: var(--myLightGrey);
+    box-shadow: 8px 8px 100px black;
+    scale: 1.1;
+    transition: 0.25s;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    height: fit-content;
+    padding: 1rem;
+    border: 1px var(--myDarkGrey);
+    border-radius: 10px;
+    margin: 1rem;
+    background-color: var(--myDarkGrey);
+    color: white;
+  }
+  .left {
+    max-width: 50%;
+    padding: 1rem;
+    padding-right: 3rem;
+    border-right: solid 1px var(--myLighterGrey);
+    margin-right: 3rem;
+    color: var(--myLighterGrey);
+    font-family: Roboto;
+  }
+  .right {
+    max-width: 50%;
+    padding: 1rem;
+    margin-left: 3rem;
+    color: var(--myLighterGrey);
+    font-family: Roboto;
+  }
+  .right h2 {
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 200%;
+  }
+  .right a {
+    color: var(--myBlue);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: 0.1s;
+  }
+  .right a:hover {
+  color: var(--myLightBlue);
+  transition: 0.1s;
+  }
+  .right iframe {
+    height: 350px;
+    width: 350px;
+  }
+
+  #introLeft {
+    padding: 1rem;
+    padding-right: 5rem;
+    border-right: solid 2px var(--myLighterGrey);
+    font-size: 200%;
+  }
+  #introRight {
+    padding: 1rem;
+    padding-left: 5rem;
+  }
+
+  #footer {
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    width: 100%;
+    position:static;
+    bottom: 0;
+    padding: 0;
+    margin: 0;
+    background-color: #1c1c1c;
+  }
+  .footerItem {
+    padding: 1rem;
+    color: grey;
+  }
+  .footerItem:hover {
+    color: white;
+    text-decoration: underline;
+  }
+}
+
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  
+  /* CSS */
+  
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  
+  /* CSS */
+  
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  html {
+    display: flexbox;
+    min-height: 100vh;
+  }
+
+  #header {
+    position: relative;
+    background-color: var(--myDarkGrey);
+    cursor: default;
+    display: none;
+  }
+  #header img {
+    height: 1rem;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+  }
+  #header h1 {
+    position: absolute;
+    inset: 40%;
+    color: white;
+    font-size: 500%;
+  }
+
+  #navbar {
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    width: 100%;
+    top: 0;
+    position: sticky;
+    background-color: var(--myBlue);
+    transition: 0.3s ease all;
+  }
+  .navbarItem {
+    min-width: fit-content;
+    position: relative;
+    padding: 1.4rem;
+    padding-left: 0.75rem;
+    padding-right: 1rem;
+    border-right: solid 1px var(--myLightGrey);
+    margin-top: 0.3rem;
+    margin-bottom: 0.6rem;
+    color: white;
+    font-size: 12px;
+    font-family: Roboto;
+    transition: 0.25s;
+  }
+  .navbarItem:last-child {
+    border: none;
+  }
+  .navbarItem:active {
+    background-color: var(--myLightGrey);
+    box-shadow: 8px 8px 100px black;
+    scale: 1.1;
+    transition: 0.25s;
+  }
+
+  #notice {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: solid 2px #FF0000;
+    margin: 1rem;
+    color: white;
+    font-family: Roboto;
+    font-size: xx-small;
+    font-weight:lighter;
+  }
+  #notice h4 {
+    padding: 0.5rem;
+    margin: 0;
+  }
+  #notice img {
+    height: 20px;
+    padding: 0;
+    padding-left: 0.5rem;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    height: fit-content;
+    padding: 1rem;
+    border: 1px var(--myDarkGrey);
+    border-radius: 6px;
+    margin: 0.5rem;
+    background-color: var(--myDarkGrey);
+    color: white;
+  }
+  .left {
+    border-right: solid 1px var(--myLighterGrey);
+    margin-right: 1rem;
+    color: var(--myLighterGrey);
+    font-family: Roboto;
+    font-size: 11px;
+  }
+  .right {
+    color: var(--myLighterGrey);
+    font-family: Roboto;
+  }
+
+  .right a {
+    color: var(--myBlue);
+    text-decoration: underline;
+    transition: 0.1s;
+  }
+  .right a:active {
+  color: var(--myLightBlue);
+  transition: 0.1s;
+  }
+
+  #introLeft {
+    padding: 1rem;
+    padding-right: 1rem;
+    border-right: solid 2px var(--myLighterGrey);
+    font-size: 130%;
+  }
+  #introRight {
+    padding: 1rem;
+    padding-left: 1rem;
+  }
+
+  #aboutMe .left {
+    border: none;
+    font-size: 10px;
+  }
+  #iframe {
+    display: none;
+  }
+
+  #showcase .left {
+    padding-right: 0.5rem;
+    font-size: 11px;
+  }
+  #showcase .right {
+    padding: 1rem;
+    font-size: 10px;
+  }
+  #showcase .right br {
+    display: none;
+  }
+
+  #contactDetails .left {
+    padding-right: 0;
+    margin: 0;
+    border: none;
+    font-size: 9px;
+  }
+
+  #contactElements {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .contactElement {
+    padding: 0.5rem;
+    border: solid 1px white;
+    border-radius: 5px;
+    margin: 1em;
+    box-shadow: 2px 2px 30px black;
+  }
+  .contactElement:active {
+    box-shadow: 8px 8px 100px;
+    scale: 1.1;
+  }
+  .contactElement img {
+    height: 20px;
+  }
+
+  #footer {
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    width: 100%;
+    bottom: 0;
+    padding: 0;
+    margin: 0;
+    background-color: #1c1c1c;
+    font-size: 12px;
+  }
+  .footerItem {
+    padding-left: 1rem;
+    color: grey;
+    text-decoration: underline;
+  }
+  .footerItem:active {
+    color: white;
+  }
+}
+
+/*
+CSS for light and dark mode
+*/
+
+@media (prefers-color-scheme: light) {
+
+  body {
+    min-height: 100vh;
+    width: 100%;
+    background-color: white;
+  }
+
+  *{
+    color: black;
+  }
+
+  #header img {
+    opacity: 0.89;
+  }
+
+  .right a:hover {
+    color: #1d8ddd;
+  }
+
+  #footer {
+    background-color: var(--myLighterGrey);
+  }
+  #footer .footerItem {
+    color: #5b5b5b;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    min-height: 100vh;
+    width: 100%;
+    background-color: black;
+  }
+}
